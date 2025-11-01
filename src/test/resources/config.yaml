@@ -1,0 +1,22 @@
+wildberries:
+  feedbackUrl: "https://www.wildberries.ru/catalog/521896959/feedbacks?imtId=234818091&size=720932801"
+  dateFormat: "yyyy-MM-dd HH:mm"
+  outputCsvPath: "feedbacks.csv"
+#  Скроллинг и ожидание
+  scraping:
+    scrollDelayMs: 3000
+    maxScrollAttempts: 5
+    waitForFeedbacksTimeoutSec: 30
+#  css-селекторы
+  selectors:
+    feedbackCard: "li.comments__item.feedback"
+    author: ".feedback__header"
+    date: "div.feedback__date"
+    reviewBody: "p[itemprop='reviewBody']"
+    rating: ".feedback__rating"
+    photo: ".feedback__photos img"
+    videoBtn: ".feedback__video-btn"
+    tags: ".feedbacks-bables__list li"
+selenium:
+  headless: true
+  chromeDriverPath: "src/test/resources/chrome/chromedriver.exe"
